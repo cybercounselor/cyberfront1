@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Quien soy";
+const identity = {
+  firstName: "Lucas",
+  country: "Argentina",
+  occupation: "Tattoo artist",
+  estilos: ["new school", "traditional"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const happy = true;
+const finished = false;
+const goal = 3;
+
+const skillColor = "navy";
+const textCase = "uppercase";
+---
+<html lang="en">
+  <head>
+    <meta charset ="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+    <style define:vars={{skillColor, textCase}}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill {
+        color: var(--skillColor);
+        font-weight: bold;
+        text-transform: var(--textCase);
+      }
+    </style>
+  </head>
+  <body>
+    <Layout title="Tattoo">
+    
+      
+    <h1>{pageTitle}</h1>
+    <h2>...y de qué trata este sitio!</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptatum.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate accusamus incidunt impedit sed soluta reiciendis architecto facere nulla assumenda ducimus.</p>
+
+   
+<ul>
+  <li>Mi nombre es {identity.firstName}.</li>
+  <li>Vivo en {identity.country} soy {identity.occupation}.</li>
+  {identity.estilos.length >= 2 && 
+    <li>Me especializo en: {identity.estilos[0]} y {identity.estilos[1]}</li>
+  } 
+</ul>
+<p>Soy bueno en:</p>
+<ul>
+  {skills.map((skill) => <li class="skill">{skill}</li>)}
+</ul>
+
+{happy && <p>Estoy feliz de poder dedicarme a esto y ayudarte a encontrar tu tatuaje perfecto!</p>}
+
+{finished && <p>I finished this tutorial!</p>}
+
+{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+</Layout> 
+  </body>
+</html>

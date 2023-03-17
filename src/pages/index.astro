@@ -1,10 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+const pageTitle = "Tattoo artist";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="TATTOO ARTIST">
+	<body>
+		
+	
 	<main>
+		<title>{pageTitle}</title>
 		<h1>TATTOO<span class="text-gradient">ARTIST</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
@@ -33,9 +38,15 @@ import Card from '../components/Card.astro';
 			/>
 		</ul>
 	</main>
+	</body>
 </Layout>
-
+ 
 <style>
+body{
+	background-image: url("/googles.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
 	main {
 		margin: auto;
 		padding: 1.5rem;
