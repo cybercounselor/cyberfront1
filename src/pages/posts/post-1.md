@@ -10,7 +10,7 @@ image:
     alt: 'El logo del blog.'
 tags: ["blogs", "blogging", "articulos"]
 ---
-///https://www.markdownguide.org/cheat-sheet/
+//https://www.markdownguide.org/cheat-sheet/
 
 ## Lo que encontrarás aquí
 
